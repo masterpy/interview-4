@@ -67,3 +67,17 @@ myObject.func();
 4、
 hasOwnProperty()：判断对象是否有某个特定的属性。必须用字符串指定该属性。
 isPrototypeOf()：判断该对象是否为另一个对象的原型。
+
+5、
+ 填写内容让下面代码支持a.name = “name1”; b.name = “name2”;
+	function obj(name){
+		（1）
+	}
+	obj.（2） = "name2";
+	var a = obj("name1");
+	var b = new obj; 
+解：
+	（1）：
+	 	if (name) { this.name = name; } return this; 
+	（2）：
+		prototype.name 

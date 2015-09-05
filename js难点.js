@@ -1,3 +1,4 @@
+1、
 if(! "a" in window){
 	var a = 1;
 }
@@ -13,3 +14,30 @@ alert(a);	//undefined
 			a = 1;
 		}
 		alert(a);
+
+2、
+var a,b;			
+(function(){
+	alert(a);		//undefined
+	alert(b);		//undefined
+	var a=b=3;
+	alert(a);		//3
+	alert(b);		//3
+})();
+alert(a);			//undefined
+alert(b);			//3
+注意：
+	var a=b=3;这句话相当于：var a=3;b=3;
+	在这里a是局部变量，而b是全局变量。
+	另外，由于变量提升，上面代码相当于：
+		var a,b;
+		(function(){
+			var a;
+			alert(a);
+			alert(b);
+			a=b=3;
+			alert(a);
+			alert(b);
+		})();
+		alert(a);
+		alert(b);

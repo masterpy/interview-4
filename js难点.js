@@ -63,3 +63,7 @@ myObject.func();
 	3）这个立即执行匿名函数表达式（IIFE）是由window调用的，this指向window。
 	4）IIFE的作用域处于myObject.func的作用域中，本作用域找不到self变量，沿着作用域链向上
 	查找self变量，找到了指向myObject对象的self。
+
+4、
+hasOwnProperty()：判断对象是否有某个特定的属性。必须用字符串指定该属性。
+isPrototypeOf()：判断该对象是否为另一个对象的原型。

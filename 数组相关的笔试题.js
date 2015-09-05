@@ -31,3 +31,10 @@ console.info(result);//显示结果
 			} 
 			return result; 
 		}
+
+2、
+输出对象中值大于2的key的数组：
+var data = {a:1,b:2,c:3,d:4};
+Object.keys(data).filter(function(index) {
+	return data[index]>2;
+});
